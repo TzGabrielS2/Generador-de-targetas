@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador</title>
+    <link rel="stylesheet" href="./estilos/estilo.css">
+    <script src="./script/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Generador de targetas</h1>
+    </header>
+    <main id="main">
+
+        <div id="contenedor-principal">
+            <div id="formulario-contenedor">
+                <form id="formulario">
+                    <h2>Registro de Datos</h2>
+
+                    <label for="nombre"><strong>Nombre:</strong></label>
+                    <input type="text" id="nombre" name="nombre" required 
+                        placeholder="Ej: Carolina"
+                        pattern="[A-Za-z]+"
+                        minlength="4"
+                        maxlength="10">
+                    <br><br>
+
+                    <label for="cargo"><strong>Cargo:</strong></label>
+                    <input type="text" id="cargo" name="cargo" required
+                        title="Ingrese sólo letras"
+                        pattern="[A-Za-z]+"
+                        minlength="4"
+                        maxlength="12">
+                    <br><br>
+                    
+                    <label for="color-favorito"><strong>Color favorito:</strong></label>
+                    <input type="color" id="color-favorito" name="color-favorito" value="#ffffff" required
+                        title="Ingrese sólo letras"
+                        pattern="[A-Za-z]+"
+                        minlength="4"
+                        maxlength="12">
+                    <br><br>
+                    <button type="reset">Limpiar</button>
+                    <button type="submit">Generar</button>
+                    <br><br>
+                </form>
+            </div>
+            <div id="targeta">
+                <p id="destino-nombre"><strong>Nombre:</strong></p>
+                <p id="destino-cargo"><strong>Cargo:</strong> </p>
+            </div>
+        </div>
+        <a href="#" id="mostrar-targetas">Ver las targetas generadas</a>
+        <div id="targetas-generadas"></div>
+    </main>
+    <footer>
+        <p>&copy; Generador de targetas</p>
+    </footer>
+</body>
+</html>
